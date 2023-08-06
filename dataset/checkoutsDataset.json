@@ -1,0 +1,36 @@
+{
+	"name": "checkoutsDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "checkout.csv",
+				"container": "datalake-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "BookID",
+				"type": "String"
+			},
+			{
+				"name": "CheckoutMonth",
+				"type": "String"
+			},
+			{
+				"name": "Checkouts",
+				"type": "String"
+			}
+		]
+	}
+}
